@@ -5,7 +5,8 @@ import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
 import ReplyRoundedIcon from '@mui/icons-material/ReplyRounded';
 import DownloadOutlinedIcon from '@mui/icons-material/DownloadOutlined';
-import VolunteerActivismOutlinedIcon from '@mui/icons-material/VolunteerActivismOutlined';
+
+
 const Container  = styled.div`
   display: flex;
   gap: 24px;
@@ -54,6 +55,29 @@ const Hr = styled.hr`
 const Recommendation = styled.div`
   flex 2;
 `;
+const Channel = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+const ChannelInfo = styled.div`
+width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #999;`;
+
+const Image = styled.img``;
+
+const ChannelDetail = styled.div``;
+
+const ChannelName = styled.span``;
+
+const ChannelCounter = styled.span``;
+
+const Description = styled.div``;
+
+const Subscribe = styled.button`
+
+`;
 const Video = () => {
   return (
     <Container>
@@ -79,6 +103,16 @@ const Video = () => {
         </Buttons>
         </Details>
         <Hr />
+        <Channel>
+          <ChannelInfo>
+            <Image src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTckChF-nfhaP7gU1UAwq5SEoj_GK9HIk6wZg&usqp=CAU' />
+            <ChannelDetail>
+              <ChannelName>prsndp</ChannelName>
+              <ChannelCounter>2.1k</ChannelCounter>
+            </ChannelDetail>
+          </ChannelInfo>
+          <Subscribe>SUBSCRIBE</Subscribe>
+        </Channel>
       </Content>
       <Recommendation>Recommendation</Recommendation>
     </Container>
