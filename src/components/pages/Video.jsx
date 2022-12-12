@@ -6,7 +6,6 @@ import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
 import ReplyRoundedIcon from '@mui/icons-material/ReplyRounded';
 import DownloadOutlinedIcon from '@mui/icons-material/DownloadOutlined';
 
-
 const Container  = styled.div`
   display: flex;
   gap: 24px;
@@ -105,7 +104,7 @@ const Video = () => {
         <Hr />
         <Channel>
           <ChannelInfo>
-            <Image src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTckChF-nfhaP7gU1UAwq5SEoj_GK9HIk6wZg&usqp=CAU' />
+            <Image/>
             <ChannelDetail>
               <ChannelName>prsndp</ChannelName>
               <ChannelCounter>2.1k</ChannelCounter>
