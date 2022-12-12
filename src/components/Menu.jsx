@@ -44,7 +44,6 @@ const Logo = styled.div`
 
 const Img = styled.img`
     height: 25px;
-
 `;
 
 const Item = styled.div`
@@ -53,6 +52,14 @@ const Item = styled.div`
     gap: 20px;
     cursor: pointer;
     padding: 4px;
+    border: 1px solid ${({theme}) =>theme.bgLighter};
+
+    &:hover{
+        background-color: ${({theme})=> theme.soft};
+        border-radius: 3px;
+        border: 0.5px solid gray;
+        backgroud: transparent;
+    }
 `;
 const Hr = styled.hr`
     margin: 15px 0px;
@@ -114,6 +121,7 @@ const Menu = ({darkMode,  setDarkMode}) => {
         <Hr />
         <Login>
             Sign in to like videos, comment, and Subscribe.
+            <Link to='signin' style={{textDecoration: 'none'}}></Link>
             <Button><AccountCircleIcon />SIGN IN</Button>
         </Login>
         <Hr />
