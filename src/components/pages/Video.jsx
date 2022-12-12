@@ -5,6 +5,8 @@ import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
 import ReplyRoundedIcon from '@mui/icons-material/ReplyRounded';
 import DownloadOutlinedIcon from '@mui/icons-material/DownloadOutlined';
+import Comments from '../Comments';
+import Card from '../Card';
 
 const Container  = styled.div`
   display: flex;
@@ -59,22 +61,46 @@ const Channel = styled.div`
   justify-content: space-between;
 `;
 const ChannelInfo = styled.div`
-width: 36px;
-  height: 36px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+`;
+
+const Image = styled.img`
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  background-color: #999;`;
+`;
 
-const Image = styled.img``;
+const ChannelDetail = styled.div`
+  display: flex;
+  flex-direction: column;
+  color:  ${({ theme})=> theme.text};
+`;
 
-const ChannelDetail = styled.div``;
+const ChannelName = styled.span`
+  font-weight: 500;
+`;
 
-const ChannelName = styled.span``;
+const ChannelCounter = styled.span`
+  margin-top: 5px;
+  margin-bottom: 20px;
+  color: ${({ theme })=> theme.textSoft};
+  font-size: 12px;
+`;
 
-const ChannelCounter = styled.span``;
-
-const Description = styled.div``;
+const Description = styled.p`
+  font-size: 14px;
+`;
 
 const Subscribe = styled.button`
+background-color:  red;
+font-weight: 500;
+color:  white;
+border: none;
+border-radius: 3px;
+height: max-content;
+padding: 10px;
 
 `;
 const Video = () => {
@@ -104,18 +130,31 @@ const Video = () => {
         <Hr />
         <Channel>
           <ChannelInfo>
-            <Image/>
+            <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTckChF-nfhaP7gU1UAwq5SEoj_GK9HIk6wZg&usqp=CAU" />
             <ChannelDetail>
               <ChannelName>prsndp</ChannelName>
-              <ChannelCounter>2.1k</ChannelCounter>
+              <ChannelCounter>200k subscribers</ChannelCounter>
+              <Description>
+                Various versions have evolved over the years, sometimes by accident, sometimes on purpose, injected humour and the like.
+              </Description>
             </ChannelDetail>
           </ChannelInfo>
           <Subscribe>SUBSCRIBE</Subscribe>
         </Channel>
+        <Hr />
+        <Comments />
       </Content>
-      <Recommendation>Recommendation</Recommendation>
+      <Recommendation>
+        <Card type='sm' />
+        <Card type='sm' />
+        <Card type='sm' />
+        <Card type='sm' />
+        <Card type='sm' />
+        <Card type='sm' />
+        <Card type='sm' />
+
+      </Recommendation>
     </Container>
-   
   )
 }
 
